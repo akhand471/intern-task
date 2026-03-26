@@ -43,3 +43,4 @@
 - ReactJS Frontend with TailwindCSS styling
 - Data tables displaying Users and Teachers separately
 - 1-1 Relationship between `auth_user` and `teachers` tables where registration populates both.
+# intern-task
