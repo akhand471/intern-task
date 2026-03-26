@@ -43,10 +43,21 @@
 - ReactJS Frontend with TailwindCSS styling
 - Data tables displaying Users and Teachers separately
 - 1-1 Relationship between `auth_user` and `teachers` tables where registration populates both.
-# intern-task
-# intern-task
-# intern-task
-# intern-task
-# intern-task
-# intern-task
-# intern-task
+
+## Deployment Guide
+The repository is fully configured for 1-click deployments to Render (Backend) and Vercel (Frontend).
+
+### Backend & Database (Render)
+1. Go to [Render Dashboard](https://dashboard.render.com).
+2. Click **New** -> **Blueprints**.
+3. Connect this GitHub repository.
+4. Render will automatically detect the `render.yaml` file in the root and provision both the **PostgreSQL Database** and the **CodeIgniter Docker Web Service**.
+
+### Frontend (Vercel)
+1. Go to [Vercel Dashboard](https://vercel.com/new).
+2. Import this GitHub repository.
+3. Set the **Framework Preset** to `Vite`.
+4. Set the **Root Directory** to `frontend`.
+5. Add an Environment Variable:
+   - `VITE_API_URL` = `https://your-render-backend-url.onrender.com/api` (Replace with the URL you get from Render).
+6. Click **Deploy**. Vercel will automatically read `vercel.json` and handle routing seamlessly!

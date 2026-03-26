@@ -13,7 +13,7 @@ class AuthFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        $key = "secret_intern_key";
+        $key = "super_secret_intern_task_key_for_jwt_auth_2026";
         
         $header = $request->getServer('HTTP_AUTHORIZATION');
         $token = null;

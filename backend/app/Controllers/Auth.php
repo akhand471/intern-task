@@ -9,7 +9,7 @@ use Firebase\JWT\JWT;
 
 class Auth extends ResourceController
 {
-    private $key = "secret_intern_key"; 
+    private $key = "super_secret_intern_task_key_for_jwt_auth_2026"; 
 
     public function register()
     {

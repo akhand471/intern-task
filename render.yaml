@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: intern-task-backend
+    env: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: CI_ENVIRONMENT
+        value: production
+      - key: app.baseURL
+        # This can be left blank or set to your actual render URL dynamically
+        value: /
+      - key: database.default.hostname
+        fromDatabase:
+          name: intern-task-db
+          property: host
+      - key: database.default.database
+        fromDatabase:
+          name: intern-task-db
+          property: database
+      - key: database.default.username
+        fromDatabase:
+          name: intern-task-db
+          property: user
+      - key: database.default.password
+        fromDatabase:
+          name: intern-task-db
+          property: password
+      - key: database.default.DBDriver
+        value: Postgre
+      - key: database.default.port
+        value: 5432
+
+databases:
+  - name: intern-task-db
+    databaseName: intern_task
+    user: intern_user
+    plan: free
